@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  each msg in messages
+    p Author: #{msg.user}
+    p Date Posted: #{msg.added}
+    p Message: #{msg.text}
+
+  a(href='/new') Add a new message

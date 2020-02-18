@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p #{title}
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='author') Author:
+      input#author.form-control(type='text', placeholder='William Shakespeare' name='author' value=(undefined===author ? '' : author))
+    div.form-group
+      label(for='message') Message:
+      input#message.form-control(type='text', placeholder='To be, or not to be...' name='message' value=(undefined===message ? '' : message))
+    button.btn.btn-primary(type='submit') Submit
